@@ -1,0 +1,95 @@
+@import "../../bower_components/bourbon/dist/bourbon"; 
+@import "variables";
+@import "../../bower_components/neat/app/assets/stylesheets/neat"; 
+
+
+.wrapper {
+	@include outer-container;
+	border: 1px solid red;
+	font-family: $helvetica;
+
+	.bazana {
+		@include span-columns(12);
+		/*
+		min-height:60px;
+		.cover {
+				@include span-columns(1 of 12);
+				background: transparent url("/asset/albumcover/cover1.jpg") no-repeat scroll center top;
+				border-radius: 5px 5px 5px 5px;
+				height: 40px;
+				width:40px;
+				border: 1px solid red;	
+		}
+		.songinfo {
+			@include span-columns(3 of 12);
+			border: 1px solid red;	
+		}
+		.control {
+			@include span-columns(2 of 12);
+			cursor: pointer;
+
+			border: 1px solid red;	
+
+			.play {
+				background-position: -8px -171px;
+				background: transparent url("/img/spr.png") no-repeat scroll 0 0;
+			}
+			.pause {
+				background-position: -8px -198px;
+				display: none;
+				background: transparent url("/img/spr.png") no-repeat scroll 0 0;
+			}
+
+			.rew {
+				background-position: -54px -171px;
+				background: transparent url("/img/spr.png") no-repeat scroll 0 0;
+			}
+			.fwd {
+				background-position: -100px -171px;
+				background: transparent url("/img/spr.png") no-repeat scroll 0 0;
+			}
+		}
+		.playervisuals {
+			@include span-columns(6 of 12);
+			border: 1px solid red;
+			.tracker {
+				height: 8px;
+				display:inline;
+			}
+		}
+	*/
+
+
+	}
+
+	.headbar { 
+		@include span-columns(12);
+		
+		border: 1px solid red;
+
+		.logo {
+			@include span-columns(4 of 12);
+		}
+
+		.login {
+			@include span-columns(4 of 12);
+			@include shift(4);
+			@include omega;
+		}
+	}
+
+	.leftcol { 
+		@include span-columns(3); 
+		@include pad();
+		border: 1px solid red;
+
+	}
+	.rightcol { 
+		@include span-columns(9); 
+		@include omega;
+		
+		@include pad();
+		border: 1px solid red;
+
+	}
+}

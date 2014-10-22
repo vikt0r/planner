@@ -1,0 +1,1 @@
+/private/var/www/mp3/laravel/app/views/albums/show.blade.php

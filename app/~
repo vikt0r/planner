@@ -1,0 +1,50 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the Closure to execute when that URI is requested.
+|
+*/
+
+/*
+ * MEERKATS APP
+ */
+
+/*
+ * END MEERKATS APP
+ */
+
+Route::get('/', function()
+{
+	return View::make('index');
+});
+
+
+Route::post('/user/login', 'HomeController@loginUser');
+Route::get('/logout', function(){
+	Auth::logout();
+	return Redirect::to('/');
+});
+
+Route::resource('g', 'GaansController' );
+Route::resource('user', 'UsersController');
+
+Route::get('/neat', function()
+{
+	return View::make('neat');
+});
+
+
+
+// Route::resource('u', 'UsersController');
+
+
+// Route::group( ['previx' => 'api/v1'], function()
+//  {
+// 	Route::resource('lessons', 'LessonsController');
+// });

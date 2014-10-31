@@ -1,0 +1,32 @@
+
+$(document).ready( function(){$('#sidebar').affix({
+      offset: {
+        top: 240
+      }
+    });
+    //login,register form
+    function rememberMe()
+    {
+        console.log('rememberme');
+        var domCheckbox = jQuery('.login .checkbox');
+        jquery(domCheckbox).on('click', function(evnt){
+            if ( jQuery(this.hasClass('show') )
+                jQuery(this.removeClass('show');
+            else
+                jQuery(this).('show');
+        });
+
+    }
+    function showPassword() {
+        var key_attr = $('#key').attr('type');
+
+        if(key_attr != 'text') {
+            $('.checkbox').addClass('show');
+            $('#key').attr('type', 'text');
+        } else {
+            $('.checkbox').removeClass('show');
+            $('#key').attr('type', 'password');
+        }
+    }
+}); //document ready
+
